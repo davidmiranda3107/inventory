@@ -18,5 +18,8 @@ spring:
     level:
       org.hibernate.SQL: debug
 
+##  liquibase:
+##    enabled: false
+
 server:
   port: 8080
