@@ -34,4 +34,9 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
+
+    @PrePersist
+    public void prePersist() {
+        this.minimumStock = 5;
+    }
 }

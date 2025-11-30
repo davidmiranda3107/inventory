@@ -26,9 +26,15 @@ public class PurchaseOrder {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
-    @OneToMany(mappedBy = "purchaseOrder", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<PurchaseOrderItem> items;
 
     @Enumerated(EnumType.STRING)
     private PurchaseOrderStatus status;
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDateTime.now();
+        this.status = PurchaseOrderStatus.RECEIVED;
+    }
 }
