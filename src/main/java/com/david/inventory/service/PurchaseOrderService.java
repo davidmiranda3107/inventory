@@ -53,6 +53,7 @@ public class PurchaseOrderService {
             log.setQuantityChange(item.getQuantity());
             log.setNotes("Purchase order #" + savedOrder.getId());
             log.setTimestamp(LocalDateTime.now());
+            log.setType(StockLogType.STOCK_IN);
             stockRepo.save(log);
         }
 
