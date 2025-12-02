@@ -22,10 +22,10 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class SaleOrderService {
 
-    private ProductRepository productRepo;
-    private StockLogRepository stockRepo;
-    private SaleOrderRepository saleRepo;
-    private SaleOrderItemRepository itemRepo;
+    private final ProductRepository productRepo;
+    private final StockLogRepository stockRepo;
+    private final SaleOrderRepository saleRepo;
+    private final SaleOrderItemRepository itemRepo;
 
     public SaleOrderResponse create(SaleOrderRequest saleRequest) {
 
