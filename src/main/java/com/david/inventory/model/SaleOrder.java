@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,7 @@ public class SaleOrder {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<SaleOrderItem> items;
+    private List<SaleOrderItem> items = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private SaleOrderStatus status;

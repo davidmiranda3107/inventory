@@ -26,4 +26,7 @@ public class ProductRequest {
 
     @NotNull
     private Long supplierId;
+
+    @NotNull
+    private String sku;
 }

@@ -44,6 +44,7 @@ public class PurchaseOrderService {
                             .quantity(itemRequest.getQuantity())
                             .build();
             itemRepo.save(item);
+            savedOrder.getItems().add(item);
 
             product.setQuantity(product.getQuantity() + item.getQuantity());
             productRepo.save(product);

@@ -27,6 +27,8 @@ public class Product {
 
     private double price;
 
+    private String sku;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;

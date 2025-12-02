@@ -100,6 +100,6 @@ public class ProductService {
     private ProductResponse toResponse(Product product) {
         return new ProductResponse(product.getId(), product.getName(), product.getDescription(),
                 product.getPrice(), product.getQuantity(), product.getCategory().getId(),
-                product.getSupplier().getId());
+                product.getSupplier().getId(), product.getSku());
     }
 }

@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -27,7 +28,7 @@ public class PurchaseOrder {
     private Supplier supplier;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<PurchaseOrderItem> items;
+    private List<PurchaseOrderItem> items = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private PurchaseOrderStatus status;
