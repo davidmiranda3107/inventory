@@ -2,7 +2,6 @@ package com.david.inventory.controller;
 
 import com.david.inventory.dto.ProductRequest;
 import com.david.inventory.dto.ProductResponse;
-import com.david.inventory.model.Product;
 import com.david.inventory.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

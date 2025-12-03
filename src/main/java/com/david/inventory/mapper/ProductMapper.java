@@ -29,8 +29,8 @@ public abstract class ProductMapper {
 
     @Mapping(target = "category", source = "categoryId")
     @Mapping(target = "supplier", source = "supplierId")
-    @Mapping(target = "id", ignore = true) // Ignorar el ID del DTO
-    @Mapping(target = "minimumStock", ignore = true) // Ignorar, mantenemos el valor existente
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "minimumStock", ignore = true)
     public abstract void updateEntityFromDto(ProductRequest dto, @MappingTarget Product entity);
 
     protected Category mapCategoryIdToCategory(Long categoryId) {
