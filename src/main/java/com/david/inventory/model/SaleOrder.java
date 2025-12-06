@@ -24,6 +24,7 @@ public class SaleOrder {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<SaleOrderItem> items = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)

@@ -28,6 +28,7 @@ public class PurchaseOrder {
     private Supplier supplier;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<PurchaseOrderItem> items = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
